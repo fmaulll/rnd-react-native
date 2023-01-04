@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 
-const StyledInput = ({ icon, onChange, style, ...other }) => {
+const StyledInput = ({ icon, onChangeText, style, ...other }) => {
   const inputRef = useRef(null);
 
   const handleFocus = () => {
@@ -22,7 +22,7 @@ const StyledInput = ({ icon, onChange, style, ...other }) => {
           ref={inputRef}
           autoComplete="email"
           style={styles.input}
-          onChangeText={onChange}
+          onChangeText={onChangeText}
           autoCapitalize="none"
           {...other}
         />
